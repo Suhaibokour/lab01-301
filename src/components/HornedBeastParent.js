@@ -19,14 +19,33 @@ class HornedBeastParent extends React.Component {
         this.setState({
             numOfVotes: this.state.numOfVotes + 1
         })
+        // this.props.filterHandler();
         this.props.handleShow();
         this.props.updateSelectedData(this.props.titleM,this.props.imageUrlM,this.props.descriptionM)
 
     }
+   
 
     render() {
         return (
             <>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={this.props.imageUrlM} onClick={this.votesOnClickNumber} />
+                        <Card.Body>
+                            <Card.Title>{this.props.titleM}</Card.Title>
+                            <Card.Text>
+                                ❤️ : {this.state.numOfVotes}
+                            </Card.Text>
+                            <Card.Text>
+                                {this.props.descriptionM}
+                            </Card.Text>
+                            <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+
                 <Col>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={this.props.imageUrlM} onClick={this.votesOnClickNumber} />
