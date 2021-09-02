@@ -1,13 +1,12 @@
 import React from 'react';
 import HornedBeastParent from './HornedBeastParent';
-// import data from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Row from 'react-bootstrap/Row';
 
 
 class Main extends React.Component {
     render() {
+        console.log(this.props.dataFile);
         return (
             <>
                 <Row xs={1} md={3} className="g-4">
@@ -19,15 +18,19 @@ class Main extends React.Component {
                                 descriptionM={item.description}
                                 handleShow={this.props.handleShow}
                                 updateSelectedData={this.props.updateSelectedData}
+                                // filterHandler={this.props.filterHandler}
                             />
 
 
                         )
                     })}
+
+
                 </Row>
 
             </>
         )
+
     }
 };
 

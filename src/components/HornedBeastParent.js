@@ -19,10 +19,12 @@ class HornedBeastParent extends React.Component {
         this.setState({
             numOfVotes: this.state.numOfVotes + 1
         })
+        // this.props.filterHandler();
         this.props.handleShow();
         this.props.updateSelectedData(this.props.titleM,this.props.imageUrlM,this.props.descriptionM)
 
     }
+   
 
     render() {
         return (
@@ -42,6 +44,9 @@ class HornedBeastParent extends React.Component {
                         </Card.Body>
                     </Card>
                 </Col>
+
+
+                
 
             </>
         )
