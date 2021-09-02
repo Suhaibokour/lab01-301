@@ -43,27 +43,25 @@ class App extends React.Component {
   }
 
   filterHandler = (event) => {
-    event.preventDefault();
-    let horns = event.target.value;
-    let filteredData = dataFile.filter(item => {
-      // if (item.horns === 1) {
-      //   return true;
-      // } else if (item.horns === 2) {
-      //   return true;
-      // } else if (item.horns === 3) {
-      //   return true;
-      // } else {
-      //   return true;
-      // }
-      return (item.horns === Number(horns));
+    let filteredData;
+    if(event.target.value==='all'){
+       filteredData=dataFile;
+    }else{
+       filteredData = dataFile.filter(item => {
+      
+        return (item.horns === parseInt(event.target.value));
+  
+      }
+      )
+  
+      
 
     }
-    )
-
+    
     this.setState({
       data: filteredData
     })
-    
+   console.log(filteredData)
   }
 
 
@@ -76,10 +74,10 @@ class App extends React.Component {
           filterHandler={this.filterHandler}
         />
         <Main
-          dataFile={dataFile}
+          dataFile={this.state.data}
           handleShow={this.handleShow}
           updateSelectedData={this.updateSelectedData}
-          filterHandler={this.filterHandler}
+          // filterHandler={this.filterHandler}
 
         />
         <SelectBeast

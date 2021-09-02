@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
     render() {
+        console.log(this.props.dataFile);
         return (
             <>
                 <Row xs={1} md={3} className="g-4">
@@ -17,29 +18,19 @@ class Main extends React.Component {
                                 descriptionM={item.description}
                                 handleShow={this.props.handleShow}
                                 updateSelectedData={this.props.updateSelectedData}
-                                filterHandler={this.props.filterHandler}
+                                // filterHandler={this.props.filterHandler}
                             />
 
 
                         )
                     })}
 
-                    {/* {this.props.filteredData.map((item) => {
-                        return (
-                            <HornedBeastParent
-                                titleM={item.title}
-                                imageUrlM={item.image_url}
-                                descriptionM={item.description}
-                                handleShow={this.props.handleShow}
-                                updateSelectedData={this.props.updateSelectedData}
 
-                            />
-                        )
-                    })}                */}
                 </Row>
 
             </>
         )
+
     }
 };
 

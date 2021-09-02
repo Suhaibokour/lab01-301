@@ -4,7 +4,7 @@ class Header extends React.Component{
     render(){
         return(
             <>
-            <h1>Gallery Of Horns </h1>
+            <h1 style={{ padding: 20 }}>Gallery Of Horns </h1>
             </>
         )
     }

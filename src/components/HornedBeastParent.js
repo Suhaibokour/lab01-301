@@ -46,21 +46,7 @@ class HornedBeastParent extends React.Component {
                 </Col>
 
 
-                <Col>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={this.props.imageUrlM} onClick={this.votesOnClickNumber} />
-                        <Card.Body>
-                            <Card.Title>{this.props.titleM}</Card.Title>
-                            <Card.Text>
-                                ❤️ : {this.state.numOfVotes}
-                            </Card.Text>
-                            <Card.Text>
-                                {this.props.descriptionM}
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                
 
             </>
         )
